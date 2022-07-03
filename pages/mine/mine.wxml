@@ -1,0 +1,2 @@
+<!--pages/mine/mine.wxml-->
+<include src="/pages/tabbar/tabbar" />

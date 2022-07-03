@@ -9,14 +9,21 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/cart/index",
+          "pathName": "pages/home/home",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pages/index/index",
+          "pathName": "pages/tabbar/tabbar",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/discover/discover",
           "query": "",
           "launchMode": "default",
           "scene": null

@@ -1,0 +1,3 @@
+<!--pages/discover/discover.wxml-->
+
+<include src="/pages/tabbar/tabbar" />

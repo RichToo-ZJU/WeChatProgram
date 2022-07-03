@@ -1,0 +1,2 @@
+<!--pages/inquiry/inquiry.wxml-->
+<include src="/pages/tabbar/tabbar" />

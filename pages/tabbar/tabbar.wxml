@@ -1,0 +1,12 @@
+<!--pages/tabbar/tabbar.wxml-->
+<view class="tabbar">
+  <view class="item {{index==idx?'active':''}}" 
+    wx:for="{{tabBar}}" 
+    wx:for-index="idx" 
+    bindtap="goto" 
+    data-index='{{idx}}'>
+    <i class="iconfont {{item.icon}} icon"></i>
+    <view class="text">{{item.name}}</view>
+  </view>
+  <view class="move" style="left:{{90+(index*157)}}rpx"></view>
+</view>
