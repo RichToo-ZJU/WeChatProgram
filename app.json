@@ -4,11 +4,11 @@
     "pages/discover/discover",
     "pages/mine/mine",
     "pages/inquiry/inquiry",
-    "pages/tabbar/tabbar"
+    "pages/tabbar/tabbar",
+    "pages/emergency/emergency"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationStyle": "custom",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"

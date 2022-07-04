@@ -8,22 +8,22 @@ Page({
   data: {
     index:3,
     tabBar:[
-        {
-          name:'home',
-          icon:'icon-heart-rate',
-        },
-        {
-          name:'product',
-          icon:'icon-faxian',
-        },
-        {
-          name:'user',
-          icon:'icon-liaotian',
-        },
-        {
-          name:'user',
-          icon:'icon-yonghu-yuan',
-        }
+      {
+        name:'home',
+        icon:'icon-heart-rate',
+      },
+      {
+        name:'product',
+        icon:'icon-faxian',
+      },
+      {
+        name:'inquiry',
+        icon:'icon-liaotian',
+      },
+      {
+        name:'user',
+        icon:'icon-yonghu-yuan',
+      }
       ]
     },
     goto(e){

@@ -27,6 +27,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/emergency/emergency",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

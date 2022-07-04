@@ -1,4 +1,5 @@
 // pages/home/home.js
+var util = require('../../utils/util.js');
 var app = getApp()
 Page({
 
@@ -7,23 +8,39 @@ Page({
    */
   data: {
     index:0,
+    user_name:"世界",
+    weekday: '',
+    week: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    month_day:'',
+    month: [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'Jun',
+            'Jul',
+            'Aug', 
+            'Sep', 
+            'Oct',
+            'Nov',
+            'Dec'],
     tabBar:[
-        {
-          name:'home',
-          icon:'icon-heart-rate',
-        },
-        {
-          name:'product',
-          icon:'icon-faxian',
-        },
-        {
-          name:'user',
-          icon:'icon-liaotian',
-        },
-        {
-          name:'user',
-          icon:'icon-yonghu-yuan',
-        }
+      {
+        name:'home',
+        icon:'icon-heart-rate',
+      },
+      {
+        name:'product',
+        icon:'icon-faxian',
+      },
+      {
+        name:'inquiry',
+        icon:'icon-liaotian',
+      },
+      {
+        name:'user',
+        icon:'icon-yonghu-yuan',
+      }
       ]
     },
 
@@ -67,10 +84,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    let that = this;
-    that.setData({
-        index:app.globalData.index//赋值
-    })
+        // 调用函数时，传入new Date()参数，返回值是日期和时间
+        var time = util.formatTime(new Date());
+        // 再通过setData更改Page()里面的data，动态更新页面的数据
+        time=time.split(" ")[0].split("/")//变数组
+        this.setData({
+          time: time
+        });
+        console.log(time)
+        let that = this;
+        that.setData({
+            index:app.globalData.index//赋值
+        })
   },
 
   /**
@@ -83,8 +108,51 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow() {
-
+  onShow(){
+      var today=new Date().getDay();
+      var month_time=new Date().getMonth();
+      console.log("today:"+today);
+      console.log("month_time:"+month_time);
+     switch (today){
+         case 0:
+         this.setData({
+           weekday: this.week[0]
+         }) 
+         break; 
+         case 1:
+         case 2:
+         case 3:
+         case 4:
+         case 5:
+         case 6:
+        this.setData({
+          weekday: this.data.week[today]
+        })
+         break;
+       }
+       switch (month_time){
+        case 0:
+        this.setData({
+          month_day: this.month[0]
+        }) 
+        break; 
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:    
+        case 9:    
+        case 10:
+        case 11:   
+    
+       this.setData({
+         month_day: this.data.month[month_time-1]
+       })
+        break;
+      }
   },
 
   /**

@@ -1,6 +1,7 @@
 {
 
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "私信"
+    "navigationBarTitleText": "home",
+    "navigationBarBackgroundColor": "#ffffff"  
 
 }

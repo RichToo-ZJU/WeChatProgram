@@ -18,7 +18,7 @@ Page({
           icon:'icon-faxian',
         },
         {
-          name:'user',
+          name:'inquiry',
           icon:'icon-liaotian',
         },
         {
