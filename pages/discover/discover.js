@@ -1,4 +1,5 @@
 // pages/home/home.js
+var util = require('../../utils/util.js')
 var app = getApp()
 Page({
 
@@ -28,13 +29,11 @@ Page({
     },
 
     goto(e){
-        var next_index=e.currentTarget.dataset.index
         if(e.currentTarget.dataset.index!=this.data.index){
           this.setData({
             index:e.currentTarget.dataset.index
           })
         }
-       // console.log(e.currentTarget.dataset.index)
        if(e.currentTarget.dataset.index == 0)
        {
            app.globalData.index=e.currentTarget.dataset.index
@@ -46,53 +45,24 @@ Page({
        if(e.currentTarget.dataset.index == 1)
        {
            app.globalData.index=e.currentTarget.dataset.index
-            wx.redirectTo({
-                url: '../discover/discover'
-            })
-; 
        }
-
-
         if(e.currentTarget.dataset.index == 2)
         {
             app.globalData.index=e.currentTarget.dataset.index
-                wx.redirectTo({
-                    url: '../inquiry/inquiry'
-                })
+            wx.redirectTo({
+                url: '../inquiry/inquiry'
+            })
             
         }
         if(e.currentTarget.dataset.index == 3)
         {
-            wx.setStorageSync("next_index", next_index);
             app.globalData.index=e.currentTarget.dataset.index
-                wx.redirectTo({
-                    url: '../mine/mine'
-                })
+            wx.redirectTo({
+                url: '../mine/mine'
+            })
 
         }
       },  
-
-//   goto:function(e){
-//     if(e.currentTarget.dataset.index != app.globalData.index){
-//         app.globalData.index=e.currentTarget.dataset.index
-//         this.index=e.currentTarget.dataset.index,
-//         console.log(app.globalData.index)
-//     }
-//     if(app.globalData.index == 1)
-//         wx.navigateTo({
-//             url: '../discover/discover'
-//         })
-//   },  
-  
-    // goto(e){
-    //     if(e.currentTarget.dataset.index!=this.data.index){
-    //       this.setData({
-    //         index:e.currentTarget.dataset.index
-    //       })
-    //     }
-
-    //   },  
-
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,4 +1,6 @@
 {
 
-  "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "私信"
+
 }

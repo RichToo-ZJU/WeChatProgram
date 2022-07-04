@@ -27,48 +27,35 @@ Page({
       ]
     },
     goto(e){
-        var next_index=e.currentTarget.dataset.index
         if(e.currentTarget.dataset.index!=this.data.index){
           this.setData({
             index:e.currentTarget.dataset.index
           })
         }
-       // console.log(e.currentTarget.dataset.index)
         if(e.currentTarget.dataset.index == 0)
         {
-            wx.setStorageSync("next_index", next_index);
             app.globalData.index=e.currentTarget.dataset.index          
-
              wx.redirectTo({
                  url: '../home/home'
              })
-         
-
         }
         if(e.currentTarget.dataset.index == 1)
         {
-            wx.setStorageSync("next_index", next_index);
             app.globalData.index=e.currentTarget.dataset.index
-
                 wx.redirectTo({
                     url: '../discover/discover'
                 })
-
-
         }
-        // if(e.currentTarget.dataset.index == 3)
-        // {
-        //     wx.setStorageSync("next_index", next_index);
-        //     app.globalData.index=e.currentTarget.dataset.index
-        // }
         if(e.currentTarget.dataset.index == 2)
         {
-            wx.setStorageSync("next_index", next_index);
             app.globalData.index=e.currentTarget.dataset.index
                 wx.redirectTo({
                     url: '../inquiry/inquiry'
                 })
-
+        }
+        if(e.currentTarget.dataset.index == 3)
+        {
+            app.globalData.index=e.currentTarget.dataset.index
         }
       },  
 
@@ -77,10 +64,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    // var next_index = wx.getStorageSync("next_indexi");
-    // this.setData({
-    //     index:next_index
-    //   })
     let that = this;
     that.setData({
         index:app.globalData.index//赋值
