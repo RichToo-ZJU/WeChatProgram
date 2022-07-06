@@ -1,2 +1,5 @@
 /**app.wxss**/
-@import '/pubilc/iconfont.wxss'
+@import '/pubilc/iconfont.wxss';        
+.container {
+    position: relative;
+}

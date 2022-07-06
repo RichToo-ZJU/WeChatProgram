@@ -1,2 +1,23 @@
-<!--pages/inquiry/inquiry.wxml-->
+<!--pages/inquire/inquire.wxml-->
+<navigation-bar nav-title="{{navTitle}}"></navigation-bar>
+
+<!--title-->
+
+<view class="page_bg" style=" top:{{navBarHeight+5}}px;">
+  <view class="subtitle">全部</view>
+  <block wx:for="{{arrayDr}}" wx:for-item="Dr">
+    <view class="doctor_box">
+      <image class="Dr_img float_left" src="{{Dr.image}}"/>
+      <view class="txt">
+        <view class="Dr_name">{{Dr.name}}</view>
+        <view class="Dr_hospital">{{Dr.hospital}}</view>
+        <view class="Dr_rate">{{Dr.rate}}</view>
+      </view>
+      <view class="box_distance">
+        <van-icon class="icon_distance" name="logistics" size="16"/>
+        <view class="Dr_distance">{{Dr.distance}}km</view>
+      </view>
+    </view>
+  </block>
+</view> 
 <include src="/pages/tabbar/tabbar" />

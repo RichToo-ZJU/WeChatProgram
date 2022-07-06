@@ -14,7 +14,7 @@ Page({
           icon:'icon-heart-rate',
         },
         {
-          name:'product',
+          name:'discovery',
           icon:'icon-faxian',
         },
         {
@@ -25,9 +25,22 @@ Page({
           name:'user',
           icon:'icon-yonghu-yuan',
         }
-      ]
-    },
-
+    ],
+      navTitle: "医护知识",
+      navBarHeight:0,
+      imgUrls: [
+        '../../images/24213.jpg',
+        '../../images/24280.jpg',
+        '../../images/1444983318907-_DSC1826.jpg'
+      ],
+      navTitle: "紧急处理",
+      indicatorDots: false,
+      autoplay: true,
+      interval: 5000,
+      duration: 1000,
+      feed: [],
+      feed_length: 0  
+  },
     goto(e){
         if(e.currentTarget.dataset.index!=this.data.index){
           this.setData({
@@ -75,6 +88,11 @@ Page({
     that.setData({
         index:app.globalData.index//赋值
     })
+    that.setData({
+        navBarHeight:app.globalData.navBarHeight//赋值
+    })
+    console.log(that.data.navBarHeight)
+
 },
 
   /**

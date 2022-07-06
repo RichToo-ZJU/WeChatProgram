@@ -10,6 +10,8 @@
     <view class="clearfloat"/>
   </view>
 </template> -->
+<navigation-bar ></navigation-bar>
+
 <view class="condition">    
   <image class="user flo_l" 
     src="https://img.yzcdn.cn/vant/cat.jpeg"    
@@ -25,36 +27,90 @@
 <view class="text_condition">    
     <view class="txt">
     	<view class="date">{{weekday+","+time[2]+" "+month_day}}</view>
-        <view class="hello">{{"你好，"+user_name}}</view>
-        <view class="notify">{{"紧急处理与在线问诊"}}</view>
+      <view class="hello">{{"你好，"+user_name}}</view>
+      <view class="notify">{{"紧急处理与在线问诊"}}</view>
     </view>
 </view>
 <view class="bc_condition">
     <view class="bc_title">
-        <view class="bc_icon flo_l ">
-            <text class="text_icon">紧急</text>
-            <text class="text_icon">处理</text>
+        <view class="bc_icon  ">
+          <view class="size_pictures">
+            <image src="/images/home_alarm.png"></image>
+          </view>
+            <view class="text_icon">紧急</view>
+            <view class="text_icon">处理</view>
         </view>   
-        
-        <view class="bc_icon flo_r ">
+        <view class="bc_icon">
+          <view class="size_pictures">
+            <image src="/images/home_search.png"></image>
+          </view>
             <text class="text_icon">在线</text>
-            <text class="text_icon">阅读</text>
-        </view>  
+            <text class="text_icon">问诊</text>
+        </view>   
           <!-- <image src="{{item.icon}}" mode="aspectFit"/> -->
           <!-- <view class="font_26">{{item.title}}</view> -->
-        <!-- <view class="clearfloat"/> -->
-      </view>
+        <view class="clearfloat"/>
+    </view>
       
     <view class="bc_recommend">
         <view class="notify1">
-          科普文章
-          <span class="flo_r notify1" bindtap="goto" data-wpygoto-a="/pages/borrow" data-wpygoto-b="tab">
-            more
+          <view class="text_kepu">科普文章</view>
+          <view class="arrow">       
             <image src="../../images/more.png" mode="aspectFit" style="width: 30rpx;height: 30rpx;margin-left: -15rpx;margin-top: 0rpx;"/>
-          </span>
+          </view> 
         </view>
-        <template is="tem_recommend" data="{{recommendList}}"/>
-      </view>
+        <view class="article_all">
+          <view class="single_artile">
+            <view class="article_picture">
+              <image src="../../images/article_test.png"></image>
+            </view>
+            <view class="article_summarize">
+              <view class="article_summarize1">
+                China Records Lowest...
+              </view>
+              <view class="article_summarize2">
+                China Records Lowest Infecti...
+              </view>
+              <view class="news">
+                <view class="news_word"> news</view>
+              </view>
+            </view>
+          </view>
+          <view class="single_artile">
+            <view class="article_picture">
+              <image src="../../images/article_test.png"></image>
+            </view>
+            <view class="article_summarize">
+              <view class="article_summarize1">
+                China Records Lowest...
+              </view>
+              <view class="article_summarize2">
+                China Records Lowest Infecti...
+              </view>
+              <view class="news">
+                <view class="news_word"> news</view>
+              </view>
+            </view>
+          </view>
+          <view class="single_artile">
+            <view class="article_picture">
+              <image src="../../images/article_test.png"></image>
+            </view>
+            <view class="article_summarize">
+              <view class="article_summarize1">
+                China Records Lowest...
+              </view>
+              <view class="article_summarize2">
+                China Records Lowest Infecti...
+              </view>
+              <view class="news">
+                <view class="news_word"> news</view>
+              </view>
+            </view>
+          </view>
+        </view>
+    </view>
 </view>
 
 <include src="/pages/tabbar/tabbar" />
+

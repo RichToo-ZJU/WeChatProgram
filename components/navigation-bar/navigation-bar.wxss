@@ -1,0 +1,39 @@
+@import "/pubilc/iconfont.wxss";
+.nav-bar {
+    position: fixed;
+    /* display: flex; */
+    width: 100%;
+    top: 0;
+    height: 100%;
+    width: 100%;  
+    color: #fff;
+    background: rgb(255, 255, 255);
+
+}
+
+.nav-bar .square .back {
+    color: rgba(15, 184, 171, 0.9);
+        /* <!-- style="height:menuHeightpx; min-height:menuHeightpx; line-height:menuHeightpx; left:menuRightpx; top:menuToppx;" --> */
+}
+.nav-bar .search{ width: 60%; color: #333; font-size: 14px; background: #fff; position: absolute; border-radius: 50px; background: #ddd; padding-left: 14px;}
+.nav-bar .square{
+    /* width:32px; */
+    /* height:32px; */
+    background: rgb(214, 241, 241);
+    border-radius: 10px;
+    position:relative;
+    display: flex;
+    justify-content: center;/*水平居中*/
+    align-items: center;/*垂直居中*/
+}
+.title {
+  position: relative;
+  color: rgb(38, 44, 61);
+  font-family: Noto Sans SC;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  top: 50%;  
+  margin-top: -80rpx;
+}

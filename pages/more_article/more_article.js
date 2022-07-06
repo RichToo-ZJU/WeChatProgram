@@ -31,8 +31,8 @@ Page({
       "image":"/images/Doctor4.jpg",
     }
   ],
-  navTitle: "在线问诊",
-  index:2,
+  navTitle: "more",
+  index:1,
   tabBar:[
       {
         name:'home',

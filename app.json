@@ -2,10 +2,11 @@
   "pages": [
     "pages/home/home",
     "pages/discover/discover",
-    "pages/mine/mine",
     "pages/inquiry/inquiry",
     "pages/tabbar/tabbar",
-    "pages/emergency/emergency"
+    "pages/emergency/emergency",
+    "pages/mine/mine",
+    "pages/more_article/more_article"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,7 +31,10 @@
     "van-submit-bar": "@vant/weapp/submit-bar/index",
     "van-card": "@vant/weapp/card/index",
     "van-tabbar": "@vant/weapp/tabbar/index",
-    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
   },
   "sitemapLocation": "sitemap.json"
 }

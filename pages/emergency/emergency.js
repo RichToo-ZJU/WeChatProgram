@@ -1,19 +1,38 @@
 // pages/emergency/emergency.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    navBarHeight:0,
+    imgUrls: [
+      '../../images/24213.jpg',
+      '../../images/24280.jpg',
+      '../../images/1444983318907-_DSC1826.jpg'
+    ],
+    navTitle: "紧急处理",
+    indicatorDots: false,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    feed: [],
+    feed_length: 0  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
+  onLoad: function (options) 
+  {
+        let that = this;
+        that.setData({
+            navBarHeight:app.globalData.navBarHeight//赋值
+        })
+        console.log(that.data.navBarHeight)
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

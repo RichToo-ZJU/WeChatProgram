@@ -1,0 +1,15 @@
+<!-- 自定义顶部栏 -->
+<view class="nav-bar" style="height:{{navBarHeight}}px;" >
+    <!-- <view class="back iconfont icon-fanhui "/> -->
+    <!-- <van-icon class="back" class-prefix="iconfont" name="fanhui" /> -->
+    <!-- <van-icon name="arrow-left" /> -->
+    <view class="square" style="height:{{menuHeight+5}}px; width:{{menuHeight+5}}px; left:{{menuRight}}px;top:{{menuTop}}px;">
+      <i class=" iconfont icon-fanhui back"></i>
+    </view>
+    <view class="title">{{navTitle}}</view>
+</view>
+
+
+
+
+<!-- 占位，高度与顶部栏一样 -->
