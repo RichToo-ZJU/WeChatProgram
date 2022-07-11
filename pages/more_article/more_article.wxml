@@ -29,7 +29,7 @@
             <view class="article_summarize">
               <view class="article_summarize1">
                 China Records Lowest...
-              </view>
+              </view> 
               <view class="article_summarize2">
                 China Records Lowest Infecti...
               </view>
@@ -58,3 +58,5 @@
     </view>
 </view> 
 <include src="/pages/tabbar/tabbar" />
+<view class="" hover-class="none" hover-stop-propagation="false">  
+</view>

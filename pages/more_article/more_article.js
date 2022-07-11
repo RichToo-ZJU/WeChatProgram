@@ -9,8 +9,8 @@ Page({
       "distance":"2",
       "image":"/images/Doctor1.jpg",
     },
-    {
-      "name":"医生B",
+    {     
+    "name":"医生B",
       "hospital":"B市人民医院",
       "rate":"4.5(8340)",
       "distance":"20",
@@ -49,8 +49,8 @@ Page({
       {
         name:'user',
         icon:'icon-yonghu-yuan',
-      }
-  ]
+      }],
+    
 },
   goto(e){
       if(e.currentTarget.dataset.index!=this.data.index){

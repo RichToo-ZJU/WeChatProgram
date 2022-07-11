@@ -1,6 +1,7 @@
 // pages/home/home.js
 var util = require('../../utils/util.js');
 var app = getApp()
+var that
 Page({
 
   /**
@@ -8,7 +9,9 @@ Page({
    */
   data: {
     index:0,
+    userInfo: {},
     user_name:"世界",
+    user_picture:"https://img.yzcdn.cn/vant/cat.jpeg",
     weekday: '',
     week: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     month_day:'',
@@ -77,25 +80,37 @@ Page({
             })
 
         }
-      },  
-
+    },  
+    emergency_go(e){
+      wx.navigateTo({
+        url: '../emergency/emergency'
+    })
+    },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-        // 调用函数时，传入new Date()参数，返回值是日期和时间
-        var time = util.formatTime(new Date());
-        // 再通过setData更改Page()里面的data，动态更新页面的数据
-        time=time.split(" ")[0].split("/")//变数组
-        this.setData({
-          time: time
-        });
-        console.log(time)
-        let that = this;
-        that.setData({
-            index:app.globalData.index//赋值
-        })
+  onLoad:function(){
+    let that = this
+    // 调用函数时，传入new Date()参数，返回值是日期和时间
+    var time = util.formatTime(new Date());
+    // 再通过setData更改Page()里面的data，动态更新页面的数据
+    time=time.split(" ")[0].split("/")//变数组
+    this.setData({
+      time: time
+    });
+    // console.log(time)
+    console.log(that.data.userInfo)
+    if (app.globalData.userInfo.nickName!="微信用户")
+    { 
+      that.setData({
+          index:app.globalData.index,//赋值
+          userInfo:app.globalData.userInfo,
+          user_name:app.globalData.userInfo.nickName,
+          user_picture:app.globalData.userInfo.avatarUrl
+      })
+      console.log(that.data.userInfo)
+    }
   },
 
   /**
@@ -111,8 +126,8 @@ Page({
   onShow(){
       var today=new Date().getDay();
       var month_time=new Date().getMonth();
-      console.log("today:"+today);
-      console.log("month_time:"+month_time);
+      // console.log("today:"+today);
+      // console.log("month_time:"+month_time);
      switch (today){
          case 0:
          this.setData({
@@ -149,10 +164,11 @@ Page({
         case 11:   
     
        this.setData({
-         month_day: this.data.month[month_time-1]
-       })
+         month_day: this.data.month[month_time-1],
+        })
         break;
       }
+
   },
 
   /**

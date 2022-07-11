@@ -94,6 +94,7 @@ Page({
         navBarHeight:app.globalData.navBarHeight//赋值
     })
     console.log(that.data.navBarHeight)
+    console.log(app.globalData.userInfo)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -77,14 +77,6 @@
       </view>
     </van-tab>
   </van-tabs>
-
-
-
-
-
 </view>
-
-
-
 
 <include src="/pages/tabbar/tabbar" />

@@ -14,7 +14,7 @@
 
 <view class="condition">    
   <image class="user flo_l" 
-    src="https://img.yzcdn.cn/vant/cat.jpeg"    
+    src="{{user_picture}}"    
   />
   <view class="square2 flo_r">
     <view class="search iconfont icon-sousuo flo_r "></view>
@@ -33,7 +33,7 @@
 </view>
 <view class="bc_condition">
     <view class="bc_title">
-        <view class="bc_icon  ">
+        <view class="bc_icon" bindtap="emergency_go">
           <view class="size_pictures">
             <image src="/images/home_alarm.png"></image>
           </view>

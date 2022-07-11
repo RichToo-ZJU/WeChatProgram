@@ -8,5 +8,5 @@
     <i class="iconfont {{item.icon}} icon"></i>
     <view class="text">{{item.name}}</view>
   </view>
-  <view class="move" style="left:{{90+(index*157)}}rpx"></view>
+  <!-- <view class="move" style="left:{{90+(index*157)}}rpx"></view> -->
 </view>
