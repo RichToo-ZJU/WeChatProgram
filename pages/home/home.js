@@ -86,7 +86,12 @@ Page({
         url: '../emergency/emergency'
     })
     },
-
+    inquiry_go(){
+      wx.redirectTo({
+        url: '../inquiry/inquiry'
+      }),
+      app.globalData.index=2       
+    },
   /**
    * 生命周期函数--监听页面加载
    */

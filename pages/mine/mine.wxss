@@ -11,7 +11,7 @@
   text-align: center;
   color: #ffffff;
   background-color: #0eafaf;
-  margin-top: 50px;
+  margin-top: 100rpx;
 }
 
 .title_box{
@@ -29,7 +29,7 @@
 
 .user_info_bg{
   overflow:hidden;
-  width: 98%rpx;
+  /* width: 98%; */
   height: 160rpx;
   display: flex;
   justify-content: space-between;
@@ -44,11 +44,11 @@
   display: flex
 }
 .right_button{
-  width: 32px;
-  height: 32px;
+  width: 64rpx;
+  height: 64rpx;
   background: rgb(214, 248, 239);
-  border-radius: 10px;
-  margin-right: 32rpx;
+  border-radius: 20rpx;
+  margin-right: 0rpx;
 }
 .right_button::after{
   border: none; 
@@ -72,11 +72,11 @@
 
 .user_name{
   white-space: nowrap;
-  line-height: 10px;
+  line-height: 20rpx;
   color: rgb(46, 52, 75);
   font-size: 40rpx;
   font-weight: 600;
-  line-height: 41px;
+  line-height: 82rpx;
   margin-left:20rpx ;
   margin-top: 10rpx;
 }
@@ -84,7 +84,7 @@
 .user_number{
   position:relative;
   white-space: nowrap;
-  line-height: 10px;
+  line-height: 20rpx;
   color: rgb(176, 179, 199);
   margin-top:10rpx ;
   margin-left:20rpx ;

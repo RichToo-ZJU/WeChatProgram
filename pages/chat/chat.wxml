@@ -1,0 +1,65 @@
+<!--pages/chat/chat.wxml-->
+<page-meta>
+  <navigation-bar title="{{opposite_name}}" front-color="#FFFFFF" background-color="#7484ad" />
+</page-meta>
+
+<view class="pageContainer">
+  <view class="scroll-view">
+    <block wx:for="{{chatlists}}" wx:for-index="ind" wx:for-item="chat" wx:key="ind">
+      <!--用户(当前使用者，显示在右方)-->
+      <view class="chat self" wx:if="{{user_name == chat.user_name}}">
+        <view>
+          <image class="send_emoji" src="{{chat.emj_adress}}"></image>
+        </view>
+        <view class="right">
+          <view>
+            <view class="content">
+              {{chat.content}}
+            </view>
+          </view>
+        </view>
+        <view class="left">
+          <image class="user_image" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+      </view>
+      <!--医生(显示在左方)-->
+      <view class="chat" wx:else>
+        <view class="left">
+          <image class="user_image" src="{{chat.user_image}}"></image>
+        </view>
+        <view class="right">
+          <view class="opposite_name">{{chat.user_name}}</view>
+          <view class="content">
+            {{chat.content}}
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!--最下方用户输入(最大输入文本量为200)-->
+  <view class="action-box">
+    <form>
+      <view class="action-top">
+        <input class="msg-input-box" maxlength="200" type="text" value="{{invalue}}" bindinput="setContent" bindtap="bindInputbox" placeholder="发送消息" />
+        <view class="action-icon">
+          <image src="/images/emoji.png" class="emoji-icon" bindtap="showEmoji"></image>
+        </view>
+        <view class="action-icon">
+          <image src="/images/more_chat.png" class="more-icon" bindtap="showMore"></image>
+        </view>
+        <button class="send-btn-box" bindtap="sendMsg" form-type="reset">发送</button>
+      </view>
+    </form>
+    <!--表情和多选框-->
+    <view>
+      <view class="emoji-box" wx:if="{{emoji.visible}}" style="justify-content: space-around">
+        <image class="emoji_image" wx:for="{{arrayEmoji}}" wx:for-item="aE" src="{{aE.adress}}" wx:key="adress" bindtap="selectEmoji" data-Adress="{{aE.adress}}"></image>
+      </view>
+    </view>
+    <view>
+      <view class="emoji-box" wx:if="{{more.visible}}" style="justify-content: space-around">
+        <image class="more_image" wx:for="{{arrayMore}}" wx:for-item="aM" src="{{aM.adress}}" wx:key="adress"></image>
+      </view>
+    </view>
+  </view>
+</view>

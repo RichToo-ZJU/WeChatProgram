@@ -9,9 +9,7 @@
   <!--user-->
   <view class="user_info_bg">
     <view class="image_number">
-      <!-- <image class="user_img" src="{{userInfo.avatarUrl}}"/> -->
-      <open-data  class="user_img" type="userAvatarUrl"></open-data>
-
+      <image class="user_img" src="{{userInfo.avatarUrl}}"/>
       <view class="txt">
         <view class="user_name">{{userInfo.nickName}}</view>
         <text class="user_number">{{usernumber}}</text>

@@ -1,34 +1,35 @@
 const app = getApp()
 Component({
-    properties: {
-        // defaultData（父页面传递的数据-就是引用组件的页面）
-        defaultData: {
-            type: Object,
-            value: {
-                title: "我是默认标题"
-            },
-            observer: function(newVal, oldVal) {}
-        },
-        navTitle:{
-            type:String,
-            value:''
-        }
+  properties: {
+    // 是否显示左侧返回按钮
+    isBack:{
+      type:Boolean,
+      value:true
     },
-    methods: {
-        //返回层级 默认为1
-      back(e) {
-        wx.navigateTo({
-            url: "../../pages/home/home"
-        })
-        console.log(22)
-      },
-    },  
-    data: {
-        navBarHeight: app.globalData.navBarHeight,
-        menuRight: app.globalData.menuRight,
-        menuTop: app.globalData.menuTop,
-        menuHeight: app.globalData.menuHeight,
+    // 返回层级 默认为1
+    pageNum: {
+      type: Number,
+      value: 1
     },
-    attached: function() {},
-    methods: {}
+    navTitle: {
+      type: String,
+      value: ''
+    }
+  },
+  methods: {
+    //返回层级 默认为1
+    back(e) {
+      wx.navigateBack({
+        delta:e.currentTarget.dataset.num
+      })
+      console.log(e)
+    },
+  },
+  data: {
+    navBarHeight: app.globalData.navBarHeight,
+    menuRight: app.globalData.menuRight,
+    menuTop: app.globalData.menuTop,
+    menuHeight: app.globalData.menuHeight,
+  },
+  attached: function () { },
 })

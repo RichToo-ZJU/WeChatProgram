@@ -57,6 +57,4 @@
         </view>
     </view>
 </view> 
-<include src="/pages/tabbar/tabbar" />
-<view class="" hover-class="none" hover-stop-propagation="false">  
-</view>
+

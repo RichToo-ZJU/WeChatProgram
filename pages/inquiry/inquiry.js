@@ -52,6 +52,11 @@ Page({
       }
   ]
 },
+  bindViewTap(e) {
+    wx.navigateTo({
+      url: '../chat/chat'
+    })
+  },
   goto(e){
       if(e.currentTarget.dataset.index!=this.data.index){
         this.setData({

@@ -1,62 +1,34 @@
-<!-- 自定义顶部栏 -->
-<!-- <template name="tem_recommend">
-  <view  wx:for="{{recommendList}}" wx:key="index" class="recommend_item" bindtap="goto" data-wpygoto-a="/pages/library/library?id={{item.id}}">
-    <image src="{{item.logo}}" mode="aspectFill" class="flo_l"/>
-    <view class="flo_l" style="width: 80%">
-      <view class="ellipsis_1 flo_l font_28 bold color-666" style="width: 80%">{{item.name}}</view>
-      <view class="list_title" wx:if="{{item.type == 'SHARE'}}">共享</view>
-      <view class="list_title" wx:else>机构</view>
-      <view class="ellipsis_2 font_26 color-666" style="width: 100%">简介：{{item.intro}}</view>
-    </view>
-    <view class="clearfloat"/>
-  </view>
-</template> -->
 <navigation-bar nav-title="{{navTitle}}"></navigation-bar>
 
 <view class="bc_condition" style=" top:{{navBarHeight+5}}px;">
-  <view class="page-section">  
-    <swiper class="activity" indicator-dots="true" indicator-active-color="#ffffff" indicator-color="rgba(255, 255, 255, .3)"
-            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="false"
-            easing-function="easeOutCubic">
-        <block wx:for="{{imgUrls}}">
-        <swiper-item>
-          <image class="image" src="{{item}}">
-          </image>
-        </swiper-item>
-        </block>
+  <view class="page-section">
+    <swiper class="activity" indicator-dots="true" indicator-active-color="#ffffff" indicator-color="rgba(255, 255, 255, .3)" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="false" easing-function="easeOutCubic">
+      <block wx:for="{{imgUrls}}">
+        <navigator url='../../pages/emergency_deal/emergency_deal'>
+          <swiper-item>
+            <image class="image" src="{{item}}"/>
+          </swiper-item>
+        </navigator>
+      </block>
     </swiper>
   </view>
   <!-- <view class="kep-text">科普文章</view> -->
-<view class="body">
-  <view class="body-wrapper">
-      <view class="single-square">
-        <view class="single-square-picture"></view>
-        <view class="single-square-text1">
-          Blood pressure
-        </view>
-        <view class="single-square-text2">
-          Blood pressure
-        </view>
+  <view class="body">
+    <block wx:for="{{images_text}}" wx:key="id" wx:for-item="item1"  wx:for-index="index1">
+      <view class="body-wrapper">
+        <block wx:for="{{item1.image}}" wx:key="child_id" wx:for-item="item2" wx:for-index="index2">
+          <navigator class="single-square" url='../emergency_deal/emergency_deal'>
+            <image class="single-square-picture" src="{{item2.image}}"/>
+            <view class="single-square-text1">
+            {{item2.text1}}
+            </view>
+            <view class="single-square-text2">
+            {{item2.text2}}
+            </view>
+          </navigator>
+        </block>
       </view>
-      <view class="single-square">
-        <view class="single-square-picture"></view>
-        <view class="single-square-text"></view>
-      </view>
+    </block>
   </view>
-  <view class="body-wrapper">
-      <view class="single-square">
-        <view class="single-square-picture"></view>
-        <view class="single-square-text"></view>
-      </view>
-      <view class="single-square">
-        <view class="single-square-picture"></view>
-        <view class="single-square-text"></view>
-      </view>
-  </view>
+  <view class="bottom_notice">到底了捏~</view>
 </view>
-
-
-
-
-</view>
-

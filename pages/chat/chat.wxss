@@ -1,0 +1,187 @@
+/* pages/chat/chat.wxss */
+/* pages/chat/chat.wxss */
+.user_image {
+    width: 110rpx;
+    height:110rpx;
+    border-radius: 50%;
+    border:solid #e9e9e9;
+    /* Rectangle */
+    background: rgba(22, 185, 185, 0.5);
+}
+
+.opposite_name {
+    font-size: 34rpx;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    margin-top: 30rpx;
+}
+
+.self {
+    justify-content: flex-end;
+    margin-top: 30rpx;
+}
+
+.left {
+    padding: 10rpx;
+    align-self: flex-start;
+}
+
+.self .left {
+    padding-top: 0;
+}
+
+.right {
+    margin-left: 20rpx;
+}
+
+.right .content {
+    background: rgb(65, 195, 214);
+    color: white;
+    font-size: 28rpx;
+    word-break: break-all;
+    /* border:2rpx solid #ddd; */
+    padding: 20rpx;
+    line-height: 52rpx;
+    margin-right: 30rpx;
+    /* border-radius: 6rpx; */
+    position: relative;
+    min-height: 40rpx;
+
+    /* Rectangle */
+
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px 10px 10px 10px;
+}
+
+.right .content::before {
+    content: ' ';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 24rpx solid transparent;
+    border-right-color: rgb(65, 195, 214);
+    position: absolute;
+    top: 20rpx;
+    left: -46rpx;
+}
+
+.self .right .content::before {
+    border: 0;
+}
+
+.self .right .content::after {
+    content: ' ';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 24rpx solid transparent;
+    border-left-color: rgb(65, 195, 214);
+    position: absolute;
+    top: 20rpx;
+    right: -46rpx;
+}  
+/* 右边的箭头颜色 */
+
+.self.right.content {
+    background-color:rgb(255, 255, 255);
+}
+
+.pageContainer {
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.scroll-view {
+    overflow-x: hidden;
+    /*左右滚动隐藏*/
+    -webkit-overflow-scrolling: touch;
+    background-color: #ffffff;
+    padding: 0 20rpx 130rpx 20rpx;
+}
+
+.action-box {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: blue;
+}
+
+.action-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 130rpx;
+    padding: 20rpx 10rpx 20rpx 10rpx;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+}
+
+.emoji-box {
+    display: flex;
+    padding: 20rpx 10rpx 20rpx 10rpx;
+    height: 320rpx;
+    box-sizing: border-box;
+    background: #e9e9e9;
+}
+
+.send-btn-box {
+    width: 150rpx;
+    height: 68rpx;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 69rpx;
+    font-size: 32rpx;
+    color: #95949A;
+    border-radius: 15rpx;
+    margin-left: 20rpx;
+    margin-bottom: 0rpx;
+}
+
+.msg-input-box {
+    width: 450rpx;
+    height: 80rpx;
+    padding-left: 20rpx;
+    border-radius: 12rpx;
+    box-sizing: border-box;
+    line-height: 80rpx;
+    font-size: 32rpx;
+}
+
+.more-icon {
+    width: 58rpx;
+    height: 58rpx;
+    padding-left: 15rpx;
+}
+
+.emoji-icon {
+    width: 50rpx;
+    height: 50rpx;
+    padding-left: 15rpx;
+}
+
+.emoji_image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.more_image {
+    width: 150rpx;
+    height: 150rpx;
+
+}
+
+.send_emoji {
+    position: relative;
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 15rpx;
+    margin-top: 10rpx;
+    margin-right: -85rpx;
+    z-index: 200;
+}

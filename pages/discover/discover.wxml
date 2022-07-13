@@ -1,5 +1,5 @@
 <!--pages/discover/discover.wxml-->
-<navigation-bar nav-title="{{navTitle}}"></navigation-bar>
+<navigation-bar isBack="{{isback}}" nav-title="{{navTitle}}"></navigation-bar>
 <view class="bc_condition" style=" top:{{navBarHeight+5}}px;">
   <view class="page-section">  
     <swiper class="activity" indicator-dots="true" indicator-active-color="#ffffff" indicator-color="rgba(255, 255, 255, .3)"
@@ -14,69 +14,22 @@
     </swiper>
   </view>
   <view class="kep-text">科普文章</view>
-  <van-tabs swipeable animated color="rgb(15, 184, 171)" 
-            title-active-color="rgb(15, 184, 171)"
-            title-inactive-color="rgb(176, 179, 199)"
-            duration="0.2">
-    <van-tab title="损伤复康">
-      <view class="body">
+
+      <block wx:for="{{images_text}}" wx:key="id" wx:for-item="item1"  wx:for-index="index1">
         <view class="body-wrapper">
-            <view class="single-square">
-              <view class="single-square-picture"></view>
+          <block wx:for="{{item1.image}}" wx:key="child_id" wx:for-item="item2" wx:for-index="index2">
+            <navigator class="single-square" url='../science_article/science_article'>
+              <image class="single-square-picture" src="{{item2.image}}"/>
               <view class="single-square-text1">
-                Blood pressure
+              {{item2.text1}}
               </view>
               <view class="single-square-text2">
-                Blood pressure
+              {{item2.text2}}
               </view>
-            </view>
-            <view class="single-square">
-              <view class="single-square-picture"></view>
-              <view class="single-square-text"></view>
-            </view>
+            </navigator>
+          </block>
         </view>
-        <view class="body-wrapper">
-            <view class="single-square">
-              <view class="single-square-picture"></view>
-              <view class="single-square-text"></view>
-            </view>
-            <view class="single-square">
-              <view class="single-square-picture"></view>
-              <view class="single-square-text"></view>
-            </view>
-        </view>
-      </view>
-    </van-tab>
-    <van-tab title="运动保护">
-      <view class="body">
-        <view class="body-wrapper">
-            <view class="single-square">
-              <view class="single-square-picture"></view>
-              <view class="single-square-text1">
-                Blood pressure
-              </view>
-              <view class="single-square-text2">
-                Blood pressure
-              </view>
-            </view>
-            <view class="single-square">
-              <view class="single-square-picture"></view>
-              <view class="single-square-text"></view>
-            </view>
-        </view>
-        <view class="body-wrapper">
-            <view class="single-square">
-              <view class="single-square-picture"></view>
-              <view class="single-square-text"></view>
-            </view>
-            <view class="single-square">
-              <view class="single-square-picture"></view>
-              <view class="single-square-text"></view>
-            </view>
-        </view>
-      </view>
-    </van-tab>
-  </van-tabs>
+      </block>
 </view>
 
 <include src="/pages/tabbar/tabbar" />

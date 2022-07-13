@@ -1,0 +1,30 @@
+<!--pages/inquire/inquire.wxml-->
+<navigation-bar nav-title="{{navTitle}}"></navigation-bar>
+
+<!--title-->
+
+<view class="page_bg" style=" top:{{navBarHeight+5}}px;">
+  <view class="bc_recommend">
+        <view class="article_all">
+          <navigator url="../science_article_content/science_article_content">
+            <view class="single_artile">
+              <view class="article_picture">
+                <image src="../../images/article_test.png"></image>
+              </view>
+              <view class="article_summarize">
+                <view class="article_summarize1">
+                  China Records Lowest...
+                </view>
+                <view class="article_summarize2">
+                  China Records Lowest Infecti...
+                </view>
+                <view class="news">
+                  <view class="news_word"> news</view>
+                </view>
+              </view>
+            </view>
+          </navigator>
+        </view>
+    </view>
+</view> 
+

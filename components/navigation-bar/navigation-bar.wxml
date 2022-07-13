@@ -3,8 +3,8 @@
     <!-- <view class="back iconfont icon-fanhui "/> -->
     <!-- <van-icon class="back" class-prefix="iconfont" name="fanhui" /> -->
     <!-- <van-icon name="arrow-left" /> -->
-    <view class="square" style="height:{{menuHeight+5}}px; width:{{menuHeight+5}}px; left:{{menuRight}}px;top:{{menuTop}}px;" bindtap="back">
-      <i class=" iconfont icon-fanhui back"></i>
+    <view class="{{isBack? 'square':'no_square'}}" style="height:{{menuHeight+5}}px; width:{{menuHeight+5}}px; left:{{menuRight}}px;top:{{menuTop}}px; "bindtap="back" >
+      <view wx:if="{{isBack}}" class=" iconfont icon-fanhui back" hover-class="back_after" bindtap="back" ></view>
     </view>
     <view class="title">{{navTitle}}</view>
 </view>
