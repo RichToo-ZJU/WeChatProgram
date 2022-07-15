@@ -8,7 +8,7 @@
     <image src="../../images/dentist.jpg" style="top:{{statusBarHeight}}px" mode="aspectFill"></image>
   </view>
   <view class="title_bottom">
-    <view class="title">篮球运动后拉伸方法</view>
+    <view class="title">{{title_name}}</view>
   </view>
   <view class="article_date">2022/7/8</view>
   <!-- 正文 -->
@@ -18,6 +18,5 @@
     </view>
     <towxml nodes="{{article}}" />
   </view>
-  <!-- <view class="bottom_notice">到底了捏~</view> -->
   <van-divider dashed contentPosition="center">到底了捏~</van-divider>
 </view>

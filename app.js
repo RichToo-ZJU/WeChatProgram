@@ -62,6 +62,7 @@ App({
     menuTop: 0, // 胶囊距底部间距（保持底部间距一致）
     menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致）
     userInfo: {},
+    article_class_chocie:"",//科普文章选择的项目种类 0-3
   },
 
   // 引入towxml3.0解析方法

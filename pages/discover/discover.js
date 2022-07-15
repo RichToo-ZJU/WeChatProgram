@@ -32,15 +32,17 @@ Page({
         image: [
           {
             child_id: 0,
-            // image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/n4TeW5SxARb7R1hdCCN7yzlvPO98ueWc/jjcl_1.png',
+            image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/1QtEzie3FXQrtcvu3RGqGWXNFSYMwUNi/%E6%9C%89%E6%B0%A7%E7%B1%BB%E9%A1%B9%E7%9B%AE.png',
             text1: '有氧类项目',
-            text2: 'Aerobic items'
+            text2: 'Aerobic items',
+            color: "#E6F0F5"
           },
           {
             child_id: 1,
-            // image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/QeleJ8Uxt2m88CTv0KqmAzVhM4SYvBB0/jjcl_2.png',
+            image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/5MMq4wyhDXQmqXcKh8pMHS9kPqfhm8vc/%E7%90%83%E7%B1%BB%E9%A1%B9%E7%9B%AE.png',
             text1: '球类项目',
-            text2: 'Ball games'
+            text2: 'Ball games',
+            color:"#9DCEF3"
           }
         ]
       },
@@ -48,17 +50,18 @@ Page({
         id: 1,
         image: [
           {
-            child_id: 0,
-            // image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/iawo2eAnOKBcDmrQNpORkELl8g3dbIeG/jjcl_3.png',
+            child_id: 2,
+            image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/WUK59jgrDxTCXTFgcMvt8qAGLOhVQjYu/%E7%89%B9%E6%AE%8A%E4%BA%BA%E7%BE%A4.png',
             text1: '特殊人群',
-            text2: 'Special groups'
+            text2: 'Special groups',
+            color: "#D5F0F4"
           },
           {
-            child_id: 1,
-
-            // image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/0joBFqCBFQeLrev8Almyhk9YP7H51nr0/jjcl_4.png',
+            child_id: 3,
+            image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/N5lOOYlEu66JsShEcGeFX2JgJSfh9ADX/%E7%89%B9%E6%AE%8A%E5%9C%BA%E6%99%AF.png',
             text1: '特殊场景',
-            text2: 'Special scenes'
+            text2: 'Special scenes',
+            color:"rgb(255, 224, 224)"
           }
         ]
       }
@@ -78,6 +81,18 @@ Page({
     feed_length: 0,
     isback: false
   },
+  dispath(e){
+    var choice = " "
+    if (e.currentTarget.dataset.text.child_id == 0){ choice = "0" }
+    if (e.currentTarget.dataset.text.child_id == 1){ choice = "1" }
+    if (e.currentTarget.dataset.text.child_id == 2){ choice = "2" }
+    if (e.currentTarget.dataset.text.child_id == 3){ choice = "3" }
+    app.globalData.article_class_chocie = choice   
+    console.log(app.globalData.article_class_chocie)      
+    wx.redirectTo({
+      url:'../science_article/science_article?choice=' + choice
+    })
+  },
   goto(e) {
     if (e.currentTarget.dataset.index != this.data.index) {
       this.setData({
@@ -89,7 +104,6 @@ Page({
       wx.redirectTo({
         url: '../home/home'
       })
-        ;
     }
     if (e.currentTarget.dataset.index == 1) {
       app.globalData.index = e.currentTarget.dataset.index

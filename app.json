@@ -19,7 +19,6 @@
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {
-    "cu-custom": "/colorui/components/cu-custom",
     "van-button": "@vant/weapp/button/index",
     "van-image": "@vant/weapp/image/index",
     "van-tag": "@vant/weapp/tag/index",

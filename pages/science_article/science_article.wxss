@@ -195,7 +195,6 @@ page {
   min-height: 360rpx;
   background: rgb(255, 255, 255);
   margin: auto;
-  /* box-shadow: 10rpx 12rpx 36rpx rgba(0, 0, 0, 0.08); */
   display: flex;
   padding-bottom: 50rpx;
   flex-direction: column;
@@ -216,7 +215,7 @@ page {
   box-shadow: 10rpx 12rpx 36rpx rgba(0, 0, 0, 0.08);
   border-radius: 32rpx;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -226,8 +225,8 @@ page {
   background-color: rgb(255, 255, 255);
   justify-content: center;
   height: 200rpx;
-  border-radius: 32rpx;
-
+  padding-left: 10rpx;
+  width: 400rpx;
 }
 .article_summarize1{
   color: rgb(38, 44, 61);
@@ -252,6 +251,7 @@ page {
   border-radius: 40rpx;
   box-shadow: 4rpx 4rpx 12rpx rgba(0, 0, 0, 0.08);
   border-radius: 32rpx;
+  position: relative;
 }
 .news{
   background: rgb(220, 245, 249);
