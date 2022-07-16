@@ -2,105 +2,31 @@
 <navigation-bar nav-title="{{navTitle}}"></navigation-bar>
 <view class="page_wrap">
   <view class="page_all">
-    <image src="../../images/dentist.jpg" style="top:{{statusBarHeight}}px" mode="aspectFill"></image>
+    <image src="http://lc-qahwQaIm.cn-n1.lcfile.com/XAuViVnX91JbD4xN5BaYFSjMkA3s71Ez/scroll4.jpg" style="top:{{statusBarHeight}}px" mode="aspectFill"></image>
   </view>
   <view class="title_bottom">
-    <view class="title">膝关节扭伤处理措施</view>
+    <view class="title">{{class}}处理措施</view>
   </view>
-  <view class="article_date">
-    2022/7/8
-  </view>
+  <view class="article_date">2022/7/8</view>
   <view class="van-tab_class">
-    <van-tabs active="{{ active }}" swipeable animated sticky bind:click="onClick" color="rgb(15, 184, 171)" ellipsis="{{false}}" line-width="60" offset-top="{{navBarHeight}}">
-      <van-tab title="症状识别">
-        <view class="square">
-          <view class="topic">症状识别</view>
-          <text class="content">
-            人体膝关节主要由股骨、胫骨、髌骨。股骨为大腿骨，胫骨为小腿骨，髌骨就是膝盖前像盖子一样的小骨头。
-            韧带主要有四个：内侧副韧带、外侧副韧带、前交叉韧带、后交叉韧带。
-            半月板时股骨和胫骨之间的软骨，作为缓冲垫。
-            上述任何一个结构损伤，我们称之为膝关节损伤。
-          </text>
-        </view>
-      </van-tab>
-      <van-tab title="常见症状">
-        <view class="square">
-          <view class="topic">常见症状</view>
-          <text class="content">
-            1）膝关节肿胀：受损部位会迅速肿胀。
-
-            2）关节疼痛：受损部位及周围会有疼痛感，且用手按压疼痛会更明显。
-
-            3）皮肤淤青：有的患者在膝关节处会出现皮肤淤青。
-
-            4）活动障碍：患者尝尝不能完全伸直膝关节。
-          </text>
-        </view>
-      </van-tab>
-      <van-tab title="常见损伤类型">
-        <view class="square">
-          <view class="topic">常见损伤类型</view>
-          <text class="content">
-            1）交叉韧带和内侧副韧带的扭伤和撕裂
-
-            描述： 前交叉韧带 （ACL） 损伤是一种常见的运动损伤，通常由膝关节的硬停止或剧烈扭曲引起。后交叉韧带（PCL）比前交叉韧带更强，并且不常撕裂。PCL损伤可能发生在严重打击的情况下，例如当膝盖在运动中因为摔倒而猛然撞击地面;这就是为什么PCL损伤通常与其他韧带和骨损伤有关。
-
-            症状：如果您的前交叉韧带损伤，您可能会在受到损伤时听到韧带撕裂声，如果是内侧副韧带可能还会导致你的膝盖偏向一侧。此外你的膝盖可能会有不稳定的感觉，并伴随着疼痛，或者让你有呕吐感。在接下来的几个小时里，这几乎总是伴随着明显的膝盖肿胀，因为前交叉韧带在撕裂时会迅速出血。
-            试验：
-
-            治疗：保守治疗和膝盖支架可能足以满足那些对膝盖要求不高的人。
-
-            2）半月板损伤
-
-            描述： 半月板损伤通常是创伤性损伤，但也可能是由于过度使用。有时候半月板的一块会因为被撕裂而漂浮在膝关节中。
-            症状：半月板损伤可能导致膝盖锁定在特定位置，例如患者膝关节不能完全伸直，当忍着疼痛挥动小腿时，会听见咔哒一声，此时关节又可以伸直。或者上下楼梯时患者有腿发软有跪倒的趋势。半月板损伤也可能导致膝关节错位。肿胀通常伴有这些症状，且肿胀可能比前交叉韧带损伤严重得多。
-            试验：
-
-            治疗：半月板的外侧部分，通常被称为“red zone”，具有良好的血液供应，如果撕裂很小，有时可以自行愈合。相比之下，半月板的内三分之二，被称为“white zone”，没有良好的血液供应。这个区域的眼泪不会自行愈合，因为该区域缺乏血管来带来愈合的营养。因此半月板的治疗需要医疗仪器的精确判断后才能进一步确定。此外半月板损伤一般只能通过手术治疗，术后的康复是手术成败的关键。
-          </text>
-        </view>
-      </van-tab>
-      <van-tab title="病因">
-        <view class="square">
-          <view class="topic">病因</view>
-          <text class="content">
-            1）运动损伤：患者膝关节在受到外界较强力时，韧带和半月板会受到损伤，常见于激烈的竞技运动。
-
-            2）长期劳损：患者在生活、工作中，由于长期重复某些动作，如半蹲或蹲位，导致半月板磨损，也会出现本病
-          </text>
-        </view>
-      </van-tab>
-      <van-tab title="就医建议">
-        <view class="square">
-          <view class="topic">就医建议</view>
-          <text class="content">
-            膝关节损伤较为复杂，可能会出现骨折、软骨损伤甚至神经损伤和血管损伤等并发症状，在紧急处理之后要及时就医。
-          </text>
-        </view>
-      </van-tab>
-      <van-tab title="自我恢复建议">
-        <view class="square">
-          <view class="topic">自我恢复建议</view>
-          <text class="content">
-            一般损伤在就诊前可以按照以下措施静养：
-
-            1.制动：严格控制患处的行动，从激烈的活动中休息几天，减少进一步的损害。
-
-            2.冰敷：冰敷以抑制疼痛和肿胀。每3至4小时做15至20分钟。继续做2到3天或直到疼痛消失。
-
-            3.包扎：包扎膝盖，使用松紧绷带、皮带或袖子包裹关节，从而达到固定膝关节的目的。
-
-            4.抬高患肢：坐下或躺下时，用枕头垫抬高膝盖，使患处高与心脏以减少肿胀。
-
-            5.服药：服用抗炎药（在医生的治疗建议下选择药物）。
-          </text>
-          <button class="button_inquiry" hover-class="button-hover" bindtap="goto_inquiry">
-            在线问诊
-          </button>
-        </view>
-      </van-tab>
+    <van-tabs active="{{active}}" swipeable animated sticky bind:change="onChange" color="rgb(15, 184, 171)" ellipsis="{{false}}" line-width="60" offset-top="{{navBarHeight}}">
+      <block wx:for="{{content_choice}}" wx:key="title_name" wx:for-item="item1" wx:for-index="index1">
+        <van-tab title="{{item1.title_name}}">
+          <view class="square">
+            <view class="content"></view>
+            <towxml nodes="{{article}}" />
+            <view class="button" wx:if="{{show}}" >
+              <button class="button_inquiry" hover-class="button-hover" bindtap="goto_inquiry">
+                在线问诊
+              </button>
+              <button class="button_inquiry" hover-class="button-hover" bindtap="goto_evaluate">
+                评价文章
+              </button>
+            </view>
+          </view>
+        </van-tab>
+      </block>
     </van-tabs>
   </view>
-  <view class="" />
-  <view class="bottom_notice" >到底了捏~</view>
+  <view class="bottom_notice">到底了捏~</view>
 </view>

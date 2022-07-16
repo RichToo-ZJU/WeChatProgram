@@ -1,0 +1,32 @@
+/* pages/Privacy policy/Privacy policy.wxss */
+.box{
+  height: 800rpx;
+}
+.title{
+  position: absolute;
+  width: 375px;
+  height: 30px;
+  top: 22px;
+  left: 0;
+  color: rgb(38, 44, 61);
+  font-family: Noto Sans SC;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.content{
+  position:absolute;
+  width: 312px;
+  height: 1200px;
+  top: 100px;
+  left: 35px;
+  color: rgb(116, 127, 158);
+  font-family: Noto Sans SC;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: left;
+}

@@ -1,0 +1,20 @@
+<!-- pages/discover/discover.wxml -->
+<navigation-bar isBack="{{isback}}" nav-title="{{navTitle}}" color="rgb(15, 184, 171)"></navigation-bar>
+<view class="bc_condition">
+  <view class="square">
+    <view class="text1">
+      请为本次咨询作出评价
+      <view class="text2">Please comment on this article</view>
+      <view class="text3">Stars</view>
+      <van-rate value="{{ value }}" color="#ffd21e" void-icon="star" void-color="#eee" bind:change="onChange" size="{{44}}" />
+      <view class="input">
+        <van-field maxlength="{{190}}" custom-style="input" placeholder="添加评论" type="textarea" value="{{ message }}" autosize border="{{ false }}" />
+      </view>
+      <button class="output_button" bindtap="output_button">
+        确定
+      </button>
+    </view>
+  </view>
+</view>
+
+<van-toast id="van-toast" />

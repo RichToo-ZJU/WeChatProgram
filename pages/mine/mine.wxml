@@ -1,45 +1,31 @@
-<!--index.wxml-->
-
-<view class="page_bg">
-
-  <!--title-->
-  <view class="title_box">
+<!-- index.wxml -->
+<view class="page_bg" >
+  <!-- title -->
+  <view class="title_box" style=" top:{{navBarHeight}}px;">
     <view class="title" style="white-space: pre-wrap;">\n我的</view>
   </view>
-  <!--user-->
+  <!-- user -->
   <view class="user_info_bg">
     <view class="image_number">
-      <image class="user_img" src="{{userInfo.avatarUrl}}"/>
+      <image class="user_img" src="{{userInfo.avatarUrl}}" />
       <view class="txt">
         <view class="user_name">{{userInfo.nickName}}</view>
-        <text class="user_number">{{usernumber}}</text>
       </view>
     </view>
-    <button class="right_button"hover-class="hover_list" bindtap="showPopup" />
+    <button class="right_button" hover-class="hover_list" bindtap="showPopup" />
   </view>
-
-  <!--content-->
+  <!-- content -->
   <view class="content_bg">
     <van-cellgroup inset>
-      <van-cell title="历史记录"custom-class="button_style"  icon="replay" is-link clickable />
-      <van-cell title="问诊记录"custom-class="button_style"  icon="location-o" is-link/>
-      <van-cell title="康复计划"custom-class="button_style"  icon="comment-o" is-link/>
-      <van-cell title="帮助"custom-class="button_style"  icon="service" is-link/>
-      <van-cell title="模式"custom-class="button_style"  icon="desktop-o" is-link/>
-      <van-cell title="关于"custom-class="button_style"  icon="info-o" is-link/>
-      <van-cell title="登出" custom-class="button_style" bind:click="exitUser" is-link/>
+      <van-cell title="个人信息" custom-class="button_style" icon="location-o" is-link clickable />
+      <van-cell title="隐私政策" custom-class="button_style" icon="replay" is-link clickable bindtap="toPolicy" />
+      <van-cell title="版本信息" custom-class="button_style" icon="comment-o" is-link />
+      <van-cell title="患者社区" custom-class="button_style" icon="service" is-link clickable bindtap="toCommunity" />
+      <van-cell title="帮助" custom-class="button_style" icon="desktop-o" is-link />
+      <van-cell title="登出" custom-class="button_style" bind:click="exitUser" is-link />
     </van-cellgroup>
   </view>
 </view>
-
-<van-action-sheet
-  show="{{ show }}"
-  actions="{{ actions }}"
-  cancel-text="取消"
-  bind:close="onClose"
-  bind:select="onSelect"
-  bindgetuserinfo="allowGetUserInfo"
-/>
+<van-action-sheet show="{{ show }}" actions="{{ actions }}" cancel-text="取消" bind:close="onClose" bind:select="onSelect" bindgetuserinfo="allowGetUserInfo" />
 <van-toast id="van-toast" />
 <include src="/pages/tabbar/tabbar" />
-

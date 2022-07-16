@@ -1,0 +1,119 @@
+/**index.wxss**/
+
+.bc_condition {
+  height: 1800rpx;
+  width: 100%;
+  background: rgb(15, 184, 171);
+  /* box-shadow: 0rpx -8rpx 34rpx rgb(183, 247, 199); */
+  position: relative;
+  overflow: auto;
+}
+
+.square {
+  width: 686rpx;
+  height: 1000rpx;
+  margin: auto;
+  margin-top: 200rpx;
+  background: rgb(255, 255, 255);
+  box-shadow: 0rpx -10rpx 40rpx rgba(0, 0, 0, 0.1);
+  border-radius: 16rpx;
+  /* display: flex; */
+  flex-direction: column;
+  padding: auto;
+  padding-top: 200rpx;
+  padding-bottom: 20rpx;
+  overflow: hidden;
+}
+
+.square image {
+  /* Rectangle */
+  position: absolute;
+  width: 180rpx;
+  height: 180rpx;
+  top: 200rpx;
+  left: 284rpx;
+  box-shadow: 8rpx 10rpx 12rpx rgba(0, 0, 0, 0.08);
+  border-radius: 32rpx;
+}
+
+.name {
+  /* Gregory Smith */
+  width: 216rpx;
+  margin: auto;
+  position: relative;
+  color: rgb(36, 46, 66);
+  font-family: Noto Sans SC;
+  font-size: 34rpx;
+  font-weight: 400;
+  line-height: 0rpx;
+  letter-spacing: 0rpx;
+  text-align: center;
+}
+
+.text1 {
+  position: relative;
+  margin: auto;
+  margin-top: 100rpx;
+  width: 700rpx;
+  height: 60rpx;
+  color: rgb(38, 44, 61);
+  font-family: Noto Sans SC;
+  font-size: 44rpx;
+  font-weight: 400;
+  line-height: 60rpx;
+  letter-spacing: 0rpx;
+  text-align: center;
+}
+
+.text2 {
+  /* Doctor List */
+  position: relative;
+  margin-top: 30rpx;
+  width: 750rpx;
+  height: 60rpx;
+  color: rgb(151, 151, 151);
+  font-family: Noto Sans SC;
+  font-size: 40rpx;
+  font-weight: 400;
+  line-height: 60rpx;
+  letter-spacing: 0rpx;
+  text-align: center;
+}
+
+.text3 {
+  position: relative;
+  margin-top: 52rpx;
+  margin-bottom: 20rpx;
+  width: 750rpx;
+  height: 60rpx;
+  color: rgb(151, 151, 151);
+  font-family: Noto Sans SC;
+  font-size: 40rpx;
+  font-weight: 400;
+  line-height: 60rpx;
+  letter-spacing: 0rpx;
+  text-align: left;
+  padding-left: 60rpx;
+}
+
+.input {
+  /* Doctor List */
+  /* Rectangle */
+  margin: auto;
+  margin-top: 50rpx;
+  width: 622rpx;
+  height: 232rpx;
+  box-sizing: border-box;
+  border: 2rpx solid rgb(239, 239, 242);
+  border-radius: 16rpx;
+}
+
+.output_button {
+  /* Modal Panel */
+  width: 622rpx;
+  height: 90rpx;
+  margin-top: 66rpx;
+  background: rgb(84, 182, 171);
+  border-radius: 16rpx;
+  color: aliceblue;
+}

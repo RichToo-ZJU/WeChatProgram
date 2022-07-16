@@ -158,6 +158,17 @@ exitUser(e){
     userInfo: null
   })
   Toast.success('成功退出');
+},
+
+toPolicy(){
+  wx.navigateTo({
+    url: '../Privacy policy/Privacy policy',
+  })
+},
+toCommunity(){
+  wx.navigateTo({
+    url: '../patient community/patient community',
+  })
 }
 
 })

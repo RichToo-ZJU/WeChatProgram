@@ -1,0 +1,21 @@
+<!-- pages/patient community/patient community.wxml -->
+<view class="pagecontainer">
+  <view class="title">患者社区</view>
+  <block wx:for="{{content}}" wx:key="title" wx:for-item="item1" wx:for-index="index1">
+    <view class="box_1">
+      <view class="article_picture">
+        <image src="http://lc-qahwQaIm.cn-n1.lcfile.com/4ddzVevUSKzzxbduSuwN4Eck1NyhePV7/%E6%96%B9%E5%9D%972.png"></image>
+      </view>
+      <view>
+        <view class="article_title">{{item1.title}}</view>
+        <view class="article_subtitle">{{item1.subtitle}}</view>
+        <view class="box_2">
+          <view class="time">2022/7/17</view>
+          <view class="gointo">
+            <view class="gointo_text">进入</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

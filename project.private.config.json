@@ -84,6 +84,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/evaluate/evaluate",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/news_content/news_content",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

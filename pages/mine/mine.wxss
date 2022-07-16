@@ -20,7 +20,7 @@
   height: 350rpx;
   background: #0eafaf ;
   border-radius: 50rpx;
-  margin-top:-50rpx;
+  /* margin-top:-50rpx; */
 }
 
 .float_left{
@@ -78,7 +78,7 @@
   font-weight: 600;
   line-height: 82rpx;
   margin-left:20rpx ;
-  margin-top: 10rpx;
+  margin-top: 35rpx;
 }
 
 .user_number{
@@ -94,7 +94,7 @@
 .content_bg{
   box-shadow: 0rpx 8rpx 40rpx rgb(111, 133, 120); 
   width: 92%;
-  height: 728rpx;
+  height: 600rpx;
   border-radius: 18rpx;
   margin-left: 26rpx;
 }

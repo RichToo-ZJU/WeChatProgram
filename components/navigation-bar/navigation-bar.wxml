@@ -1,10 +1,10 @@
 <!-- 自定义顶部栏 -->
-<view class="nav-bar" style="height:{{navBarHeight}}px;" >
+<view class="nav-bar" style="height:{{navBarHeight}}px; background:{{color}}" >
     <!-- <view class="back iconfont icon-fanhui "/> -->
     <!-- <van-icon class="back" class-prefix="iconfont" name="fanhui" /> -->
     <!-- <van-icon name="arrow-left" /> -->
     <view class="{{isBack? 'square':'no_square'}}" style="height:{{menuHeight+5}}px; width:{{menuHeight+5}}px; left:{{menuRight}}px;top:{{menuTop}}px; "bindtap="back" >
-      <view wx:if="{{isBack}}" class=" iconfont icon-fanhui back" hover-class="back_after" bindtap="back" ></view>
+      <view wx:if="{{isBack}}" class=" iconfont icon-fanhui back" hover-class="back_after"></view>
     </view>
     <view class="title">{{navTitle}}</view>
 </view>

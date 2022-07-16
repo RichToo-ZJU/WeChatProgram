@@ -23,6 +23,13 @@
 <view class="text_condition">
   <view class="txt">
     <view class="date">{{weekday+","+time[2]+" "+month_day}}</view>
+    <view class="box">
+      <view class="left_part">
+        <view class="adress" bindtap="selectLocation">{{City}} {{County}}</view>
+        <view class="ima">当前天气状况: {{now.text}}</view>
+      </view>
+      <view class="temperature">{{now.temp}}°</view>
+    </view>
     <view class="hello">{{"你好，"+user_name}}</view>
     <view class="notify">{{"紧急处理与在线问诊"}}</view>
   </view>
@@ -56,46 +63,36 @@
         </view>
       </navigator>
     </view>
-    <navigator url="../science_article_content/science_article_content">
-      <view class="article_all">
+    <view class="article_all">
+      <navigator url="../news_content/news_content">
         <view class="single_artile">
           <view class="article_picture">
-            <image src="../../images/article_test.png"></image>
+            <image src="http://lc-qahwQaIm.cn-n1.lcfile.com/phSJWYF4Y8QjxLr4ptuqoaJVWuDA7PPV/%E6%96%B9%E5%9D%971.png"></image>
           </view>
           <view class="article_summarize">
-            <view class="article_summarize1">China Records Lowest...</view>
-            <view class="article_summarize2">China Records Lowest Infecti...</view>
+            <view class="article_summarize1">浙江高温！暑期注意防暑！</view>
+            <view class="article_summarize2">Notice the high temperature</view>
             <view class="news">
               <view class="news_word">news</view>
             </view>
           </view>
         </view>
+      </navigator >
+      <navigator url="../news_content/news_content">
         <view class="single_artile">
           <view class="article_picture">
-            <image src="../../images/article_test.png"></image>
+            <image src="http://lc-qahwQaIm.cn-n1.lcfile.com/4ddzVevUSKzzxbduSuwN4Eck1NyhePV7/%E6%96%B9%E5%9D%972.png"></image>
           </view>
           <view class="article_summarize">
-            <view class="article_summarize1">China Records Lowest...</view>
-            <view class="article_summarize2">China Records Lowest Infecti...</view>
+            <view class="article_summarize1">篮球后拉伸方法</view>
+            <view class="article_summarize2">Stretching movement after basketball</view>
             <view class="news">
               <view class="news_word">news</view>
             </view>
           </view>
         </view>
-        <view class="single_artile">
-          <view class="article_picture">
-            <image src="../../images/article_test.png"></image>
-          </view>
-          <view class="article_summarize">
-            <view class="article_summarize1">China Records Lowest...</view>
-            <view class="article_summarize2">China Records Lowest Infecti...</view>
-            <view class="news">
-              <view class="news_word">news</view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </navigator>
+      </navigator>
+    </view>
   </view>
 </view>
 <include src="/pages/tabbar/tabbar" />

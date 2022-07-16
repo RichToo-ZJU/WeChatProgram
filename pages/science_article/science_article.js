@@ -90,7 +90,7 @@ Page({
     if (e.currentTarget.dataset.text.id == 1){ choice = "1" }
     if (e.currentTarget.dataset.text.id == 2){ choice = "2" }
     if (e.currentTarget.dataset.text.id == 3){ choice = "3" }
-    wx.redirectTo({
+    wx.navigateTo({
       url:'../science_article_content/science_article_content?choice=' + choice
     })
   },

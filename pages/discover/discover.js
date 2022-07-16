@@ -68,9 +68,9 @@ Page({
     ],
     navBarHeight: 0,
     imgUrls: [
-      '../../images/dentist.jpg',
-      '../../images/dentist_card.png',
-      '../../images/1444983318907-_DSC1826.jpg'
+      'http://lc-qahwQaIm.cn-n1.lcfile.com/s04epnS7PeJgtGcyQzrTXiJ1D7fIfhpf/scroll1.png',
+      'http://lc-qahwQaIm.cn-n1.lcfile.com/oixyVIWtaBheXN9sn4p49IKadlEYFI1f/scroll2.png',
+      'http://lc-qahwQaIm.cn-n1.lcfile.com/GwQm8MTFFmiesWqnoTCW6s65SXi8fvOU/scroll3.png'
     ],
     navTitle: "医护知识",
     indicatorDots: false,
@@ -89,7 +89,7 @@ Page({
     if (e.currentTarget.dataset.text.child_id == 3){ choice = "3" }
     app.globalData.article_class_chocie = choice   
     console.log(app.globalData.article_class_chocie)      
-    wx.redirectTo({
+    wx.navigateTo({
       url:'../science_article/science_article?choice=' + choice
     })
   },

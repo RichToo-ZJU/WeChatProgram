@@ -14,6 +14,10 @@ Component({
     navTitle: {
       type: String,
       value: ''
+    },
+    color: {
+      type: String,
+      value: ''
     }
   },
   methods: {
@@ -21,6 +25,7 @@ Component({
     back(e) {
       wx.navigateBack({
         delta:e.currentTarget.dataset.num
+        // delta:1
       })
       console.log(e)
     },

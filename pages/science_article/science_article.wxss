@@ -196,7 +196,7 @@ page {
   background: rgb(255, 255, 255);
   margin: auto;
   display: flex;
-  padding-bottom: 50rpx;
+  padding-top: 50rpx;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 32rpx;

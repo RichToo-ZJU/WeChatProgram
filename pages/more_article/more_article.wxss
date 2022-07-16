@@ -197,11 +197,10 @@ page {
   margin: auto;
   /* box-shadow: 10rpx 12rpx 36rpx rgba(0, 0, 0, 0.08); */
   display: flex;
-  padding-bottom: 50rpx;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 32rpx;
-
+  padding-top: 50rpx;
 }
 .arrow{
   margin-top: auto;

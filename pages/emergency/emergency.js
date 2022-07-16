@@ -8,9 +8,9 @@ Page({
   data: {
     navBarHeight: 0,
     imgUrls: [
-      '../../images/dentist.jpg',
-      '../../images/dentist_card.png',
-      '../../images/1444983318907-_DSC1826.jpg'
+      'http://lc-qahwQaIm.cn-n1.lcfile.com/srIP8XRUQu1beHwkaoTEdu6b3CVSXGMy/scroll5.png',
+      'http://lc-qahwQaIm.cn-n1.lcfile.com/XAuViVnX91JbD4xN5BaYFSjMkA3s71Ez/scroll4.jpg',
+      'http://lc-qahwQaIm.cn-n1.lcfile.com/GwQm8MTFFmiesWqnoTCW6s65SXi8fvOU/scroll3.png'
     ],
     images_text: [
       {
@@ -34,14 +34,13 @@ Page({
         id: 1,
         image: [
           {
-            child_id: 0,
+            child_id: 2,
             image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/iawo2eAnOKBcDmrQNpORkELl8g3dbIeG/jjcl_3.png',
             text1: '腕关节',
             text2: 'Wrist joints'
           },
           {
-            child_id: 1,
-
+            child_id: 3,
             image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/0joBFqCBFQeLrev8Almyhk9YP7H51nr0/jjcl_4.png',
             text1: '肘关节',
             text2: 'Elbow joint'
@@ -52,11 +51,11 @@ Page({
         id: 2,
         image: [
           {
-            child_id: 0,
+            child_id: 4,
             image: 'http://lc-qahwQaIm.cn-n1.lcfile.com/V4ktuzrueoE28SSiHhRctvBI0TTDxOY9/jjcl_5.png',
             text1: '髋关节',
             text2: 'Hip joint'
-          }
+          },
         ]
       },
     ],
@@ -69,7 +68,21 @@ Page({
     feed_length: 0,
     isShow: false,
   },
-
+  dispath(e){
+    console.log(e)
+    var choice = " "
+    if (e.currentTarget.dataset.text.child_id == 0){ choice = "0" }
+    if (e.currentTarget.dataset.text.child_id == 1){ choice = "1" }
+    if (e.currentTarget.dataset.text.child_id == 2){ choice = "2" }
+    if (e.currentTarget.dataset.text.child_id == 3){ choice = "3" }
+    if (e.currentTarget.dataset.text.child_id == 4){ choice = "4" }
+    if (e.currentTarget.dataset.text.child_id == 5){ choice = "5" }
+    app.globalData.article_class_chocie = choice   
+    console.log(app.globalData.article_class_chocie)      
+    wx.redirectTo({
+      url:'../emergency_deal/emergency_deal?choice=' + choice
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -78,6 +91,7 @@ Page({
     that.setData({
       navBarHeight: app.globalData.navBarHeight//赋值
     })
+    
     console.log(that.data.navBarHeight)
   },
 

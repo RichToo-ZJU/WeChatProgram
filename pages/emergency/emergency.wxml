@@ -1,12 +1,11 @@
 <navigation-bar nav-title="{{navTitle}}"></navigation-bar>
-
 <view class="bc_condition" style=" top:{{navBarHeight+5}}px;">
   <view class="page-section">
     <swiper class="activity" indicator-dots="true" indicator-active-color="#ffffff" indicator-color="rgba(255, 255, 255, .3)" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="false" easing-function="easeOutCubic">
       <block wx:for="{{imgUrls}}">
         <navigator url='../../pages/emergency_deal/emergency_deal'>
           <swiper-item>
-            <image class="image" src="{{item}}"/>
+            <image class="image" src="{{item}}" />
           </swiper-item>
         </navigator>
       </block>
@@ -14,18 +13,14 @@
   </view>
   <!-- <view class="kep-text">科普文章</view> -->
   <view class="body">
-    <block wx:for="{{images_text}}" wx:key="id" wx:for-item="item1"  wx:for-index="index1">
+    <block wx:for="{{images_text}}" wx:key="id" wx:for-item="item1" wx:for-index="index1">
       <view class="body-wrapper">
-        <block wx:for="{{item1.image}}" wx:key="child_id" wx:for-item="item2" wx:for-index="index2">
-          <navigator class="single-square" url='../emergency_deal/emergency_deal'>
-            <image class="single-square-picture" src="{{item2.image}}"/>
-            <view class="single-square-text1">
-            {{item2.text1}}
-            </view>
-            <view class="single-square-text2">
-            {{item2.text2}}
-            </view>
-          </navigator>
+        <block wx:for="{{item1.image}}" wx:key="child_id" wx:for-item="item2" wx:for-index="index2" >
+          <view class="single-square" bindtap="dispath" data-text="{{item2}}">
+            <image class="single-square-picture" src="{{item2.image}}" />
+            <view class="single-square-text1">{{item2.text1}}</view>
+            <view class="single-square-text2">{{item2.text2}}</view>
+          </view>
         </block>
       </view>
     </block>

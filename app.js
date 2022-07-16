@@ -63,6 +63,7 @@ App({
     menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致）
     userInfo: {},
     article_class_chocie:"",//科普文章选择的项目种类 0-3
+    emergency_class_chocie:"",//紧急处理选择的项目种类 0-3
   },
 
   // 引入towxml3.0解析方法

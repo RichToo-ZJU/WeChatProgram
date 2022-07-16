@@ -10,7 +10,11 @@
     "pages/emergency_deal/emergency_deal",
     "pages/chat/chat",
     "pages/science_article/science_article",
-    "pages/science_article_content/science_article_content"
+    "pages/science_article_content/science_article_content",
+    "pages/evaluate/evaluate",
+    "pages/news_content/news_content",
+    "pages/Privacy policy/Privacy policy",
+    "pages/patient community/patient community"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -41,7 +45,18 @@
     "van-popup": "@vant/weapp/popup/index",
     "van-action-sheet": "@vant/weapp/action-sheet/index",
     "van-toast": "@vant/weapp/toast/index",
-    "van-divider": "@vant/weapp/divider/index"
+    "van-divider": "@vant/weapp/divider/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-field": "@vant/weapp/field/index"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "pages": [
+      "pages/home/home"
+    ],
+    
+    "scope.userLocation":{
+      "desc":"你的位置用于定位显示天气温度"
+    }
+  }
 }
